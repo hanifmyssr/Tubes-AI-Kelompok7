@@ -14,6 +14,10 @@ config/name="godot_astar_project"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameManager="*uid://h511ptnwqqb"
+
 [display]
 
 window/stretch/mode="canvas_items"

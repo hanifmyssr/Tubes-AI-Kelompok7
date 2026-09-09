@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://1apqmgoftyoh"]
+
+[ext_resource type="Script" uid="uid://itfwl6bsixfk" path="res://Scripts/UI/DebugOverlay.gd" id="1_8iy83"]
+
+[node name="DebugOverlay" type="CanvasLayer" unique_id=1691458573]
+script = ExtResource("1_8iy83")
+
+[node name="StatsLabel" type="Label" parent="." unique_id=2081689596]
+offset_top = 1.0
+offset_right = 1.0
+offset_bottom = 24.0
