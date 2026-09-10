@@ -20,6 +20,11 @@ func init_grid() -> void:
 	# Contoh rintangan dan sungai untuk tes visual
 	grid[Vector2i(5, 5)] = TerrainType.OBSTACLE
 	grid[Vector2i(5, 6)] = TerrainType.OBSTACLE
+	grid[Vector2i(5, 7)] = TerrainType.OBSTACLE
+	grid[Vector2i(10, 10)] = TerrainType.OBSTACLE
+	grid[Vector2i(11, 10)] = TerrainType.OBSTACLE
+	grid[Vector2i(10, 11)] = TerrainType.OBSTACLE
+
 	grid[Vector2i(3, 2)] = TerrainType.RIVER
 
 func is_valid_position(pos: Vector2i) -> bool:
@@ -52,3 +57,15 @@ func _draw() -> void:
 				
 			draw_rect(rect, color)
 			draw_rect(rect, Color(0, 0, 0, 0.3), false, 1.0) # Garis batas grid
+
+func is_walkable(pos: Vector2i) -> bool:
+	return is_valid_position(pos) and not is_obstacle(pos)
+	
+func get_neighbors(pos: Vector2i) -> Array[Vector2i]:
+	var neighbors: Array[Vector2i] = []
+	var directions = [Vector2i.UP, Vector2i.DOWN, Vector2i.LEFT, Vector2i.RIGHT]
+	for dir in directions:
+		var target_pos = pos + dir
+		if is_walkable(target_pos):
+			neighbors.append(target_pos)
+	return neighbors

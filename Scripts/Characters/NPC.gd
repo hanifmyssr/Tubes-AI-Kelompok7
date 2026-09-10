@@ -8,8 +8,10 @@
 #               antar sel menggunakan Godot Tween.
 # ==============================================================================
 
-class_name NPC
 extends Node2D
+
+# Tambahkan variabel ini di bagian atas (setelah deklarasi class_name/extends)
+@export_enum("A_STAR_MANHATTAN", "A_STAR_EUCLIDEAN", "A_STAR_CHEBYSHEV", "UCS") var current_algorithm: String = "A_STAR_MANHATTAN"
 
 ## Sinyal yang dipancarkan saat Bolu selesai berjalan menyusuri seluruh rute
 signal movement_finished
@@ -77,3 +79,26 @@ func move_along_path(path: Array[Vector2i]) -> void:
 	
 	# Pancarkan sinyal bahwa Bolu telah sampai di tujuan
 	movement_finished.emit()
+	# Tambahkan fungsi ini di bagian tengah/bawah skrip NPC.gd
+func calculate_and_move(target_pos: Vector2i, grid_manager) -> void:
+	var result: Dictionary = {}
+	
+	match current_algorithm:
+		"A_STAR_MANHATTAN":
+			result = AStarAlgorithm.search(grid_pos, target_pos, grid_manager, AStarAlgorithm.HeuristicType.MANHATTAN)
+		"A_STAR_EUCLIDEAN":
+			result = AStarAlgorithm.search(grid_pos, target_pos, grid_manager, AStarAlgorithm.HeuristicType.EUCLIDEAN)
+		"A_STAR_CHEBYSHEV":
+			result = AStarAlgorithm.search(grid_pos, target_pos, grid_manager, AStarAlgorithm.HeuristicType.CHEBYSHEV)
+		"UCS":
+			result = UCS.search(grid_pos, target_pos, grid_manager)
+			
+	var path: Array[Vector2i] = result.get("path", [])
+	var visited: Array[Vector2i] = result.get("visited_nodes", [])
+	var total_expanded: int = result.get("total_expanded", 0)
+	var time_ms: float = result.get("execution_time_ms", 0.0)
+	
+	GameManager.path_calculated.emit(path, visited, time_ms)
+	
+	if path.size() > 0:
+		move_along_path(path)	

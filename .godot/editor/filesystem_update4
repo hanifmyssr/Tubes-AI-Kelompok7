@@ -1,6 +1,7 @@
 res://Scenes/main.tscn
+res://Scripts/Pathfinding/AStar.gd
 res://Scripts/UI/DebugOverlay.gd
-res://Scripts/Core/GameManager.gd
-res://Scripts/npc/npc.gd
+res://Scripts/Characters/NPC.gd
 res://Scenes/UI/debug_overlay.tscn
 res://Scripts/map/map_data.gd
+res://Scripts/Core/GameManager.gd

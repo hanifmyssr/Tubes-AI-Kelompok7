@@ -87,7 +87,7 @@ static func search(start: Vector2i, target: Vector2i, grid_manager, h_type: Heur
 		# Jika f(n) sama, prioritaskan node dengan nilai h(n) lebih kecil (Tie-breaking).
 		open_list.sort_custom(
 			func(a: PathNode, b: PathNode):
-				if Mathf.is_equal_approx(a.f, b.f):
+				if is_equal_approx(a.f, b.f):
 					return a.h < b.h
 				return a.f < b.f
 		)
