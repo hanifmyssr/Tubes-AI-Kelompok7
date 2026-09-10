@@ -1,8 +1,8 @@
 class_name MapData
 extends Node2D
 
-const GRID_WIDTH: int = 15
-const GRID_HEIGHT: int = 10
+const GRID_WIDTH: int = 24
+const GRID_HEIGHT: int = 14
 const CELL_SIZE: int = 48
 
 enum TerrainType { GRASS, OBSTACLE, RIVER }

@@ -53,13 +53,25 @@ func find_path_to(target_pos: Vector2i) -> Array[Vector2i]:
 	if not map_data:
 		return [grid_position]
 		
+	var visited_nodes: Array[Vector2i] = []
+	var start_time = Time.get_ticks_usec()
+	var path: Array[Vector2i] = []
+		
 	if algorithm_type == "A_STAR":
-		return run_a_star(grid_position, target_pos)
+		path = run_a_star(grid_position, target_pos, visited_nodes)
 	else:
-		return run_ucs(grid_position, target_pos)
+		path = run_ucs(grid_position, target_pos, visited_nodes)
+
+	var end_time = Time.get_ticks_usec()
+	var time_ms = (end_time - start_time) / 1000.0
+
+	# Mengirimkan hasil rute, node yang diekspansi, dan waktu ke GameManager
+	GameManager.path_calculated.emit(path, visited_nodes, time_ms)
+
+	return path
 
 # --- ALGORITMA 1: UCS ---
-func run_ucs(start: Vector2i, goal: Vector2i) -> Array[Vector2i]:
+func run_ucs(start: Vector2i, goal: Vector2i, visited: Array[Vector2i]) -> Array[Vector2i]:
 	var open_set: Array = []
 	var came_from: Dictionary = {}
 	var cost_so_far: Dictionary = {}
@@ -73,6 +85,10 @@ func run_ucs(start: Vector2i, goal: Vector2i) -> Array[Vector2i]:
 		open_set.sort_custom(func(a, b): return a["cost"] < b["cost"])
 		var current_node = open_set.pop_front()
 		var current: Vector2i = current_node["pos"]
+
+		# Mencatat node yang sedang diekspansi
+		if current not in visited:
+			visited.append(current)
 
 		if current == goal:
 			break
@@ -93,7 +109,7 @@ func run_ucs(start: Vector2i, goal: Vector2i) -> Array[Vector2i]:
 	return reconstruct_path(came_from, start, goal)
 
 # --- ALGORITMA 2: A* ---
-func run_a_star(start: Vector2i, goal: Vector2i) -> Array[Vector2i]:
+func run_a_star(start: Vector2i, goal: Vector2i, visited: Array[Vector2i]) -> Array[Vector2i]:
 	var open_set: Array = []
 	var came_from: Dictionary = {}
 	var g_score: Dictionary = {}
@@ -108,6 +124,10 @@ func run_a_star(start: Vector2i, goal: Vector2i) -> Array[Vector2i]:
 		open_set.sort_custom(func(a, b): return a["f_score"] < b["f_score"])
 		var current_node = open_set.pop_front()
 		var current: Vector2i = current_node["pos"]
+
+		# Mencatat node yang sedang diekspansi
+		if current not in visited:
+			visited.append(current)
 
 		if current == goal:
 			break
@@ -127,7 +147,7 @@ func run_a_star(start: Vector2i, goal: Vector2i) -> Array[Vector2i]:
 				open_set.append({"pos": neighbor, "f_score": f_score})
 
 	return reconstruct_path(came_from, start, goal)
-
+	
 func heuristic(a: Vector2i, b: Vector2i) -> float:
 	return abs(a.x - b.x) + abs(a.y - b.y)
 

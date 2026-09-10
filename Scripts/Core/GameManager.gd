@@ -1,18 +1,21 @@
 extends Node
 
-# Variabel global untuk mengecek apakah simulasi AI sedang berjalan
-var is_game_active: bool = false
+# Sinyal pusat yang akan dipancarkan oleh Player/NPC dan didengarkan oleh UI
+signal path_calculated(path: Array, visited: Array, time_ms: float)
+signal algorithm_changed(algo_name: String)
 
-func _ready():
-	print("Sistem GameManager siap beroperasi.")
-	start_simulation()
+# Referensi ke UI agar GameManager bisa menyuruh UI menggambar ulang
+var debug_overlay = null
 
-func start_simulation():
-	is_game_active = true
-	print("Simulasi dimulai. AI diizinkan untuk mencari rute.")
-	# Nanti, skrip AStar.gd milik Anggota 2 akan mengecek variabel is_game_active ini
-	# sebelum mereka mulai menggerakkan NPC.
+func _ready() -> void:
+	# Menghubungkan sinyal pusat ke fungsi pembaruan UI
+	path_calculated.connect(_on_path_calculated)
 
-func end_simulation():
-	is_game_active = false
-	print("Tujuan tercapai atau simulasi dihentikan.")
+func register_overlay(overlay_node: CanvasLayer) -> void:
+	debug_overlay = overlay_node
+	print("GameManager: Debug Overlay berhasil diregistrasi.")
+
+func _on_path_calculated(path: Array, visited: Array, time_ms: float) -> void:
+	if debug_overlay:
+		# Meneruskan data dari AI ke UI DebugOverlay Anda
+		debug_overlay.update_debug_data(visited, path, time_ms)

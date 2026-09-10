@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://dlfv8vgpndabh"]
 
-[ext_resource type="Script" uid="uid://dtncrxaathxxg" path="res://scripts/map/map_data.gd" id="1_0wfyh"]
-[ext_resource type="PackedScene" uid="uid://ukapd4auhyk5" path="res://scenes/player.tscn" id="2_sugp2"]
-[ext_resource type="PackedScene" uid="uid://mkdb57fwthai" path="res://scenes/npc.tscn" id="3_sugp2"]
+[ext_resource type="Script" uid="uid://dtncrxaathxxg" path="res://Scripts/map/map_data.gd" id="1_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://ukapd4auhyk5" path="res://Scenes/player.tscn" id="2_sugp2"]
+[ext_resource type="PackedScene" uid="uid://mkdb57fwthai" path="res://Scenes/npc.tscn" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://1apqmgoftyoh" path="res://Scenes/UI/debug_overlay.tscn" id="4_jjvhh"]
 
 [node name="Main" type="Node2D" unique_id=840412245]
 
@@ -18,9 +19,4 @@ player = NodePath("../player")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1849737920]
 
-[node name="BtnAlgo" type="Button" parent="CanvasLayer" unique_id=1634236065]
-offset_right = 8.0
-offset_bottom = 8.0
-text = "Algoritma: A_STAR"
-
-[connection signal="pressed" from="CanvasLayer/BtnAlgo" to="npc" method="_on_btn_algo_pressed"]
+[node name="DebugOverlay" parent="CanvasLayer" unique_id=1691458573 instance=ExtResource("4_jjvhh")]

@@ -6,7 +6,7 @@ extends CanvasLayer
 var drawing_canvas: Control
 var expanded_nodes: Array = []
 var path_nodes: Array = []
-var tile_size: int = 32
+var tile_size: int = 48
 
 func _ready():
 	drawing_canvas = Control.new()
@@ -21,6 +21,7 @@ func _ready():
 	path_nodes = [Vector2(1, 1), Vector2(3, 1)]
 	
 	update_stats(expanded_nodes.size(), 1.5) # Contoh: 1.5 milidetik
+	GameManager.register_overlay(self)
 
 func _on_canvas_draw():
 	for node in expanded_nodes:
@@ -34,10 +35,9 @@ func _on_canvas_draw():
 			drawing_canvas.draw_line(start_pos, end_pos, Color(0.0, 1.0, 0.0), 3.0)
 
 func update_stats(count: int, time_ms: float):
-	# Menampilkan total node diekspansi dan waktu eksekusi dalam milidetik
 	var selected_algo = algorithm_dropdown.get_item_text(algorithm_dropdown.selected)
-	stats_label.text = "Algoritma: " + selected_algo + "\nTotal Node: " + str(count) + "\nWaktu: " + str(time_ms) + " ms"
-
+	stats_label.text = "Algoritma: " + selected_algo + "\nTotal Node: " + str(count) + "\nWaktu: " + str(time_ms).pad_decimals(3) + " ms"
+	
 func _on_algorithm_selected(index: int):
 	# Fungsi ini terpanggil otomatis saat Anda mengubah pilihan di dropdown
 	print("Algoritma diubah ke indeks: ", index)
