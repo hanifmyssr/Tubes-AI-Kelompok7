@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://mkdb57fwthai"]
+
+[ext_resource type="Script" uid="uid://dd1uugxqaku5p" path="res://scripts/npc/npc.gd" id="1_abqhh"]
+[ext_resource type="Texture2D" uid="uid://bghxwmeij2nxa" path="res://Assets/characters/npc/frame_000.png" id="2_rv78h"]
+
+[node name="npc" type="Node2D" unique_id=315798826]
+script = ExtResource("1_abqhh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2054736141]
+texture = ExtResource("2_rv78h")
