@@ -22,7 +22,7 @@ var step_timer: Timer
 func _ready() -> void:
 	# Sesuaikan skala visual karakter agar proporsional dengan ubin 16x16
 	if sprite:
-		sprite.scale = Vector2(0.25, 0.25)
+		sprite.scale = Vector2(0.5, 0.5)
 
 	# Auto-detect node jika belum dihubungkan di Inspector
 	if not map_data:
@@ -87,6 +87,8 @@ func _initialize_spawn_position() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_accept"): # Tombol Spasi / Enter
+		if not is_chasing and player:
+			player.show_call_bubble()
 		toggle_chase()
 
 func toggle_chase() -> void:

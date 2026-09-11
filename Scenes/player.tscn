@@ -3,9 +3,39 @@
 [ext_resource type="Texture2D" uid="uid://ckaec8uwkacni" path="res://Assets/characters/player/south.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://dxecfbsopfj6d" path="res://Scripts/player/player.gd" id="1_g2els"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_call_bubble"]
+bg_color = Color(1, 1, 1, 0.95)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.12, 0.12, 0.16, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+content_margin_left = 6.0
+content_margin_top = 3.0
+content_margin_right = 6.0
+content_margin_bottom = 3.0
+
 [node name="player" type="Node2D" unique_id=369079758]
 script = ExtResource("1_g2els")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=187645502]
-scale = Vector2(0.25, 0.25)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_3vyb7")
+
+[node name="CallBubble" type="Label" parent="." unique_id=410613558]
+visible = false
+z_index = 10
+offset_left = -32.0
+offset_top = -52.0
+offset_right = 32.0
+offset_bottom = -28.0
+text = "Bolu!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+theme_override_colors/font_color = Color(0.08, 0.08, 0.1, 1)
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_call_bubble")

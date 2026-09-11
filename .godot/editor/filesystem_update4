@@ -1,1 +1,2 @@
-res://Scripts/map/camera_anchor.gd
+res://Scripts/npc/npc.gd
+res://Scripts/player/player.gd

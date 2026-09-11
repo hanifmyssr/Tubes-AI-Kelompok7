@@ -10,13 +10,15 @@ signal player_moved(new_grid_position: Vector2i)
 var grid_position: Vector2i = Vector2i(0, 0)
 var is_moving: bool = false
 var active_tween: Tween = null
+var call_bubble_tween: Tween = null
 
 @onready var sprite: Sprite2D = get_node_or_null("Sprite2D")
+@onready var call_bubble: Label = get_node_or_null("CallBubble")
 
 func _ready() -> void:
 	# Sesuaikan skala visual karakter agar proporsional dengan ubin 16x16
 	if sprite:
-		sprite.scale = Vector2(0.25, 0.25)
+		sprite.scale = Vector2(0.5, 0.5)
 
 	# Auto-detect MapData jika belum diisi di Inspector
 	if not map_data:
@@ -32,6 +34,18 @@ func _ready() -> void:
 		update_world_position_instant()
 		# Beritahu sistem bahwa player berada di posisi spawn
 		player_moved.emit(grid_position)
+
+func show_call_bubble() -> void:
+	if not call_bubble:
+		return
+
+	call_bubble.visible = true
+	if call_bubble_tween and call_bubble_tween.is_valid():
+		call_bubble_tween.kill()
+
+	call_bubble_tween = create_tween()
+	call_bubble_tween.tween_interval(1.5)
+	call_bubble_tween.tween_callback(call_bubble.hide)
 
 func find_map_data() -> void:
 	map_data = get_node_or_null("../Map") as MapData
