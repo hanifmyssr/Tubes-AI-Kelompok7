@@ -1,5 +1,5 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1789048717
+::res://::1789138239
 export_presets.cfg::TextFile::-1::1788941754::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::7685351620017089026::1788856457::1788856462::1::::<><><>0<>0<>495e83d33347885c620be4880b6150a1<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1788857982::0::1::::<><><>0<>0<><>::
@@ -11,35 +11,47 @@ frame_000.png::CompressedTexture2D::2823440804935257002::1789023849::1789025862:
 south.png::CompressedTexture2D::7687999606674730327::1789023849::1789025862::1::::<><><>0<>0<>df9326adbda312427257adf3638fdfb5<>res://.godot/imported/south.png-258db9c2a4a3724be35e74da05883076.ctex::
 ::res://Assets/characters/player/::1789025862
 south.png::CompressedTexture2D::5474978008504990122::1789023849::1789025862::1::::<><><>0<>0<>b710f50c721f00ea66442a5f2f3902f7<>res://.godot/imported/south.png-a708a57a740586ced89ff3b2964719e9.ctex::
-::res://Assets/environment/::1789025862
-Ext_10a_DEMO.png::CompressedTexture2D::7953981690434017445::1789023849::1789025862::1::::<><><>0<>0<>cc19ba8371eee984f2877c249ae88b68<>res://.godot/imported/Ext_10a_DEMO.png-80dc0cfac738b1defe0d5010e32fba88.ctex::
+::res://Assets/environment/::1789121313
+Abandoned House 2.png::CompressedTexture2D::4905082274623540812::1789051816::1789121313::1::::<><><>0<>0<>20ea10c71a98b5c658944fc3b8487f33<>res://.godot/imported/Abandoned House 2.png-ea539bc76677a689910bc4860c11a9d5.ctex::
+Abandoned House.png::CompressedTexture2D::4963185887502171666::1789052462::1789121313::1::::<><><>0<>0<>8a94ef9a9f0100b7d642d9cb3a28f496<>res://.godot/imported/Abandoned House.png-2d2de3e8a33be10c3be45cc292f69732.ctex::
+Abandoned Tower.png::CompressedTexture2D::4184116333779229575::1789052544::1789121313::1::::<><><>0<>0<>d4d54dc4b8dbaee294aee5eeed27881c<>res://.godot/imported/Abandoned Tower.png-e36b3b24f587746d74a9e91c6b6c0ef9.ctex::
+Beekeepers Hut.png::CompressedTexture2D::1553499887905434185::1789054232::1789121313::1::::<><><>0<>0<>795edca4c568e01e2194f2a620fb57d9<>res://.godot/imported/Beekeepers Hut.png-85aba4135ce38205fe8f4241f7850986.ctex::
+Clock Tower Building.png::CompressedTexture2D::7400749388375929015::1789053056::1789121313::1::::<><><>0<>0<>6508748fa5ef0ad116c315db0ef302ed<>res://.godot/imported/Clock Tower Building.png-ea9e73abf133a3ceff227e30c9c57ead.ctex::
+Ext_10a_DEMO.png::CompressedTexture2D::7953981690434017445::1789049770::1789049770::1::::<><><>0<>0<>cc19ba8371eee984f2877c249ae88b68<>res://.godot/imported/Ext_10a_DEMO.png-80dc0cfac738b1defe0d5010e32fba88.ctex::
+Fishermans Hut.png::CompressedTexture2D::7984087587554812645::1789053002::1789121313::1::::<><><>0<>0<>00e4991edb6c3458a02b1ee39b9b4909<>res://.godot/imported/Fishermans Hut.png-7a1c3877cc7146aecfcc3b321b29ed98.ctex::
+Mansion.png::CompressedTexture2D::8834948939403725199::1789053026::1789121313::1::::<><><>0<>0<>d5128991e34513b2a88bbb0ef6fa3583<>res://.godot/imported/Mansion.png-e6f9166c11cb5d6edfbe5d954a88b8ad.ctex::
+Merchant House.png::CompressedTexture2D::523093001364894626::1789053034::1789121313::1::::<><><>0<>0<>779cd2d7016e452bcc9812d0ce558847<>res://.godot/imported/Merchant House.png-a68c932ce6a25ae903eee1691991f741.ctex::
+Painters House.png::CompressedTexture2D::9120711718342481981::1789053046::1789121313::1::::<><><>0<>0<>639289b5123a249f796ce79a52325b5f<>res://.godot/imported/Painters House.png-d65bd296401e0eb60f309d1ecfd33fd7.ctex::
+Workshop House.png::CompressedTexture2D::5963670661952195367::1789052684::1789121313::1::::<><><>0<>0<>cbbf2128b5f11e8f8723ce298d08b3b6<>res://.godot/imported/Workshop House.png-4aefae74d206fc9ff82b34b2e7340d09.ctex::
 ::res://Assets/Sprites/::1788858120
 ::res://Assets/Tilesets/::1788858121
-::res://Scenes/::1789036525
-main.tscn::PackedScene::7942996320873116785::1789036525::0::1::::<><><>0<>0<><>::uid://dtncrxaathxxg::::res://Scripts/map/map_data.gd<>uid://ukapd4auhyk5::::res://Scenes/player.tscn<>uid://mkdb57fwthai::::res://Scenes/npc.tscn<>uid://1apqmgoftyoh::::res://Scenes/UI/debug_overlay.tscn
-npc.tscn::PackedScene::863095463360767676::1789023849::0::1::::<><><>0<>0<><>::uid://dd1uugxqaku5p::::res://scripts/npc/npc.gd<>uid://bghxwmeij2nxa::::res://Assets/characters/npc/frame_000.png
-player.tscn::PackedScene::1424447639606227338::1789023849::0::1::::<><><>0<>0<><>::uid://ckaec8uwkacni::::res://Assets/characters/player/south.png<>uid://dxecfbsopfj6d::::res://scripts/player/player.gd
+::res://Scenes/::1789136721
+main.tscn::PackedScene::7942996320873116785::1789136721::0::1::::<><><>0<>0<><>::uid://ukapd4auhyk5::::res://Scenes/player.tscn<>uid://mkdb57fwthai::::res://Scenes/npc.tscn<>uid://1apqmgoftyoh::::res://Scenes/UI/debug_overlay.tscn<>uid://d1ex6e56usj3u::::res://Scenes/map.tscn
+map.tscn::PackedScene::8993881605002541472::1789125651::0::1::::<><><>0<>0<><>::uid://dtncrxaathxxg::::res://Scripts/map/map_data.gd<>res://Scripts/map/camera_anchor.gd<>uid://dlk76fkhy7h2t::::res://Assets/environment/Ext_10a_DEMO.png<>uid://cb5b8uu6kxyqu::::res://Assets/environment/Abandoned House 2.png<>uid://wer6fdyrb010::::res://Assets/environment/Beekeepers Hut.png<>uid://ccyg7gc0lp1c5::::res://Assets/environment/Abandoned House.png<>uid://b0u21xeivce2b::::res://Assets/environment/Abandoned Tower.png<>uid://cq731w47qf2cp::::res://Assets/environment/Workshop House.png<>uid://d27e13uqmw8np::::res://Assets/environment/Painters House.png<>uid://hpnjaxwe6qbi::::res://Assets/environment/Merchant House.png<>uid://dx4yk24x6hbf0::::res://Assets/environment/Mansion.png<>uid://dl0s0ya4hv0u8::::res://Assets/environment/Fishermans Hut.png<>uid://ddo8i451h5p0j::::res://Assets/environment/Clock Tower Building.png
+npc.tscn::PackedScene::863095463360767676::1789123302::0::1::::<><><>0<>0<><>::uid://dd1uugxqaku5p::::res://Scripts/npc/npc.gd<>uid://bghxwmeij2nxa::::res://Assets/characters/npc/frame_000.png
+player.tscn::PackedScene::1424447639606227338::1789123293::0::1::::<><><>0<>0<><>::uid://ckaec8uwkacni::::res://Assets/characters/player/south.png<>uid://dxecfbsopfj6d::::res://Scripts/player/player.gd
 ::res://Scenes/Characters/::1788858121
 ::res://Scenes/Levels/::1788858121
-::res://Scenes/UI/::1789038997
-debug_overlay.tscn::PackedScene::1825849902375398123::1789038997::0::1::::<><><>0<>0<><>::uid://itfwl6bsixfk::::res://Scripts/UI/DebugOverlay.gd
+::res://Scenes/UI/::1789121333
+debug_overlay.tscn::PackedScene::1825849902375398123::1789121333::0::1::::<><><>0<>0<><>::uid://itfwl6bsixfk::::res://Scripts/UI/DebugOverlay.gd
 ::res://Scripts/::1789023849
 ::res://Scripts/Characters/::1789036525
-NPC.gd::GDScript::7870175394154928754::1789036525::0::1::::<>Node2D<><>0<>0<><>::
-Player.gd::GDScript::904456682646907688::1788857387::0::1::::<>RefCounted<><>0<>0<><>::
+NPC.gd::GDScript::7870175394154928754::1789123249::0::1::::CharacterNPC<>NPC<><>0<>0<><>::
+Player.gd::GDScript::904456682646907688::1789123229::0::1::::CharacterPlayer<>Player<><>0<>0<><>::
 ::res://Scripts/Core/::1789038892
 GameManager.gd::GDScript::16319974363638785::1789038892::0::1::::<>Node<><>0<>0<><>::
 PathNode.gd::GDScript::3243454824827071387::1789034722::0::1::::PathNode<>RefCounted<><>0<>0<><>::
 SearchContract.gd::GDScript::8682818839957447653::1789034722::0::1::::SearchContract<>RefCounted<><>0<>0<><>::
-::res://Scripts/map/::1789038296
-map_data.gd::GDScript::8519839991549357912::1789038296::0::1::::MapData<>Node2D<><>0<>0<><>::
+::res://Scripts/map/::1789125767
+camera_anchor.gd::GDScript::8682331864302799265::1789138179::0::1::::<>Camera2D<><>0<>0<><>::
+map_data.gd::GDScript::8519839991549357912::1789137493::0::1::::MapData<>Node2D<><>0<>0<><>::
 ::res://Scripts/npc/::1789026641
-npc.gd::GDScript::7424752810730368107::1789026641::0::1::::NPC<>Node2D<><>0<>0<><>::
+npc.gd::GDScript::7424752810730368107::1789136686::0::1::::NPC<>Node2D<><>0<>0<><>::
 ::res://Scripts/Pathfinding/::1789036525
-AStar.gd::GDScript::146368943500341649::1789036525::0::1::::AStarAlgorithm<>RefCounted<><>0<>0<><>::
-GridManager.gd::GDScript::5962992146674916888::1788857387::0::1::::<>RefCounted<><>0<>0<><>::
-UCS.gd::GDScript::5121807250732345455::1789034722::0::1::::UCS<>RefCounted<><>0<>0<><>::
+AStar.gd::GDScript::146368943500341649::1789123314::0::1::::AStarAlgorithm<>RefCounted<><>0<>0<><>::
+GridManager.gd::GDScript::5962992146674916888::1789123214::0::1::::GridManager<>RefCounted<><>0<>0<><>::
+UCS.gd::GDScript::5121807250732345455::1789123318::0::1::::UCS<>RefCounted<><>0<>0<><>::
 ::res://Scripts/player/::1789023849
-player.gd::GDScript::8781993409711523101::1789023849::0::1::::Player<>Node2D<><>0<>0<><>::
-::res://Scripts/UI/::1789038892
-DebugOverlay.gd::GDScript::601077424576754000::1789038892::0::1::::<>CanvasLayer<><>0<>0<><>::
+player.gd::GDScript::8781993409711523101::1789137863::0::1::::Player<>Node2D<><>0<>0<><>::
+::res://Scripts/UI/::1789136721
+DebugOverlay.gd::GDScript::601077424576754000::1789137678::0::1::::<>CanvasLayer<><>0<>0<><>::

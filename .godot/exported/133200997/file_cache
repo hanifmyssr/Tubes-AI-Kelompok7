@@ -1,4 +1,5 @@
-res://Scenes/UI/debug_overlay.tscn::8ae077ce19e66f2022a82d1843de9747::1789038997::res://.godot/exported/133200997/export-8f84bbb93bd3523d005f7a891474b136-debug_overlay.scn
-res://Scenes/main.tscn::21d33c3b12684a7039b7cbc99440b683::1789036525::res://.godot/exported/133200997/export-2ddd04d543d5858e7f20c9299a8b5096-main.scn
-res://Scenes/npc.tscn::6f303d2e889535dcc3a374333bee5d44::1789023849::res://.godot/exported/133200997/export-26e0d44d544a26e90be873026591bbea-npc.scn
-res://Scenes/player.tscn::ac0810dec74e6be60d02614f951fc094::1789023849::res://.godot/exported/133200997/export-1753c997600d68ab5d20ae99fddb15c6-player.scn
+res://Scenes/UI/debug_overlay.tscn::8ae077ce19e66f2022a82d1843de9747::1789121333::res://.godot/exported/133200997/export-8f84bbb93bd3523d005f7a891474b136-debug_overlay.scn
+res://Scenes/main.tscn::e4dbae2c00b05f9d87970f286e90238a::1789136721::res://.godot/exported/133200997/export-2ddd04d543d5858e7f20c9299a8b5096-main.scn
+res://Scenes/npc.tscn::f4ddbdd43f239b5526b2451df1a56066::1789123302::res://.godot/exported/133200997/export-26e0d44d544a26e90be873026591bbea-npc.scn
+res://Scenes/player.tscn::56409d8206e35bb1b14e455292041ada::1789123293::res://.godot/exported/133200997/export-1753c997600d68ab5d20ae99fddb15c6-player.scn
+res://Scenes/map.tscn::efb6d473e190d874318203b5593d9b21::1789125651::res://.godot/exported/133200997/export-522b15b96246958d270083e8689e20e5-map.scn

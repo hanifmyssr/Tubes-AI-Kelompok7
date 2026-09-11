@@ -1,45 +1,97 @@
 class_name Player
 extends Node2D
 
-# Sinyal yang dipancarkan saat Player berpindah ubin (direspons oleh AI NPC)
+## Sinyal yang dipancarkan saat Player berpindah ubin
 signal player_moved(new_grid_position: Vector2i)
 
 @export var map_data: MapData
-var grid_position: Vector2i = Vector2i(12, 7) # Posisi awal player di koordinat grid
+@export var move_duration: float = 0.12
+
+var grid_position: Vector2i = Vector2i(0, 0)
+var is_moving: bool = false
+var active_tween: Tween = null
+
+@onready var sprite: Sprite2D = get_node_or_null("Sprite2D")
 
 func _ready() -> void:
-	update_world_position()
+	# Sesuaikan skala visual karakter agar proporsional dengan ubin 16x16
+	if sprite:
+		sprite.scale = Vector2(0.25, 0.25)
 
-func _unhandled_input(event: InputEvent) -> void:
-	if not event.is_pressed() or event.is_echo():
+	# Auto-detect MapData jika belum diisi di Inspector
+	if not map_data:
+		find_map_data()
+
+	# Jika MapData sudah siap, sinkronkan posisi spawn awal
+	if map_data:
+		if not map_data.is_node_ready():
+			await map_data.ready
+		# Spawn at map center so the player is visible on screen
+		var preferred_spawn := map_data.get_map_center()
+		grid_position = map_data.get_valid_spawn_point(preferred_spawn)
+		update_world_position_instant()
+		# Beritahu sistem bahwa player berada di posisi spawn
+		player_moved.emit(grid_position)
+
+func find_map_data() -> void:
+	map_data = get_node_or_null("../Map") as MapData
+	if not map_data:
+		map_data = get_node_or_null("../MapData") as MapData
+	if not map_data and get_parent() is MapData:
+		map_data = get_parent() as MapData
+
+func _process(_delta: float) -> void:
+	if is_moving:
 		return
-		
+
 	var direction: Vector2i = Vector2i.ZERO
-	if event.is_action_pressed("ui_up"):
+	if Input.is_action_pressed("ui_up") or Input.is_key_pressed(KEY_W):
 		direction = Vector2i.UP
-	elif event.is_action_pressed("ui_down"):
+	elif Input.is_action_pressed("ui_down") or Input.is_key_pressed(KEY_S):
 		direction = Vector2i.DOWN
-	elif event.is_action_pressed("ui_left"):
+	elif Input.is_action_pressed("ui_left") or Input.is_key_pressed(KEY_A):
 		direction = Vector2i.LEFT
-	elif event.is_action_pressed("ui_right"):
+	elif Input.is_action_pressed("ui_right") or Input.is_key_pressed(KEY_D):
 		direction = Vector2i.RIGHT
 
 	if direction != Vector2i.ZERO:
 		try_move(direction)
 
 func try_move(direction: Vector2i) -> void:
-	var target_pos: Vector2i = grid_position + direction
-	
-	# Minta validasi ke map_data apakah koordinat tujuan aman (bukan rintangan)
-	if map_data and not map_data.is_obstacle(target_pos):
-		grid_position = target_pos
-		update_world_position()
-		player_moved.emit(grid_position) # Beritahu sistem bahwa posisi player berubah
+	if is_moving:
+		return
 
-func update_world_position() -> void:
+	if not map_data:
+		find_map_data()
+		if not map_data:
+			return
+
+	var target_pos: Vector2i = grid_position + direction
+
+	# Validasi apakah koordinat tujuan dapat dilalui (walkable)
+	if map_data.is_walkable(target_pos):
+		grid_position = target_pos
+		player_moved.emit(grid_position)
+		move_to_grid(target_pos)
+
+func move_to_grid(target_grid: Vector2i) -> void:
+	is_moving = true
+	var target_world_pos = map_data.map_to_world(target_grid)
+
+	if active_tween and active_tween.is_running():
+		active_tween.kill()
+
+	active_tween = create_tween()
+	active_tween.set_trans(Tween.TRANS_QUAD)
+	active_tween.set_ease(Tween.EASE_OUT)
+	# Use global_position because map_to_world returns a global world coordinate
+	active_tween.tween_property(self, "global_position", target_world_pos, move_duration)
+
+	await active_tween.finished
+	is_moving = false
+	player_moved.emit(grid_position)
+
+func update_world_position_instant() -> void:
 	if map_data:
-		# Konversi koordinat grid (x, y) ke titik pixel di layar
-		position = Vector2(
-			grid_position.x * map_data.CELL_SIZE + map_data.CELL_SIZE / 2.0,
-			grid_position.y * map_data.CELL_SIZE + map_data.CELL_SIZE / 2.0
-		)
+		# map_to_world returns a global world position; use global_position to assign it
+		global_position = map_data.map_to_world(grid_position)

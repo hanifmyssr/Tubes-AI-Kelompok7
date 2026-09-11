@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://ukapd4auhyk5"]
 
 [ext_resource type="Texture2D" uid="uid://ckaec8uwkacni" path="res://Assets/characters/player/south.png" id="1_3vyb7"]
-[ext_resource type="Script" uid="uid://dxecfbsopfj6d" path="res://scripts/player/player.gd" id="1_g2els"]
+[ext_resource type="Script" uid="uid://dxecfbsopfj6d" path="res://Scripts/player/player.gd" id="1_g2els"]
 
 [node name="player" type="Node2D" unique_id=369079758]
 script = ExtResource("1_g2els")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=187645502]
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_3vyb7")

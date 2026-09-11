@@ -77,8 +77,9 @@ static func search(start: Vector2i, target: Vector2i, grid_manager) -> Dictionar
 			if closed_list.has(neighbor_pos):
 				continue
 
-			# Hitung tentative g_score (Setiap langkah antar grid bernilai cost 1.0)
-			var tentative_g: float = current.g + 1.0
+			# Hitung tentative g_score (default: 1.0 atau sesuai get_step_cost)
+			var step_cost: float = grid_manager.get_step_cost(neighbor_pos) if grid_manager.has_method("get_step_cost") else 1.0
+			var tentative_g: float = current.g + step_cost
 
 			if not all_nodes.has(neighbor_pos):
 				# Jika tetangga belum pernah didaftarkan, buat PathNode baru (h = 0.0)
