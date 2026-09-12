@@ -1,5 +1,5 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1789141489
+::res://::1789182491
 export_presets.cfg::TextFile::-1::1788941754::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::7685351620017089026::1788856457::1788856462::1::::<><><>0<>0<>495e83d33347885c620be4880b6150a1<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1788857982::0::1::::<><><>0<>0<><>::
@@ -29,7 +29,7 @@ Workshop House.png::CompressedTexture2D::5963670661952195367::1789052684::178912
 main.tscn::PackedScene::7942996320873116785::1789136721::0::1::::<><><>0<>0<><>::uid://ukapd4auhyk5::::res://Scenes/player.tscn<>uid://mkdb57fwthai::::res://Scenes/npc.tscn<>uid://1apqmgoftyoh::::res://Scenes/UI/debug_overlay.tscn<>uid://d1ex6e56usj3u::::res://Scenes/map.tscn
 map.tscn::PackedScene::8993881605002541472::1789125651::0::1::::<><><>0<>0<><>::uid://dtncrxaathxxg::::res://Scripts/map/map_data.gd<>res://Scripts/map/camera_anchor.gd<>uid://dlk76fkhy7h2t::::res://Assets/environment/Ext_10a_DEMO.png<>uid://cb5b8uu6kxyqu::::res://Assets/environment/Abandoned House 2.png<>uid://wer6fdyrb010::::res://Assets/environment/Beekeepers Hut.png<>uid://ccyg7gc0lp1c5::::res://Assets/environment/Abandoned House.png<>uid://b0u21xeivce2b::::res://Assets/environment/Abandoned Tower.png<>uid://cq731w47qf2cp::::res://Assets/environment/Workshop House.png<>uid://d27e13uqmw8np::::res://Assets/environment/Painters House.png<>uid://hpnjaxwe6qbi::::res://Assets/environment/Merchant House.png<>uid://dx4yk24x6hbf0::::res://Assets/environment/Mansion.png<>uid://dl0s0ya4hv0u8::::res://Assets/environment/Fishermans Hut.png<>uid://ddo8i451h5p0j::::res://Assets/environment/Clock Tower Building.png
 npc.tscn::PackedScene::863095463360767676::1789141471::0::1::::<><><>0<>0<><>::uid://dd1uugxqaku5p::::res://Scripts/npc/npc.gd<>uid://bghxwmeij2nxa::::res://Assets/characters/npc/frame_000.png
-player.tscn::PackedScene::1424447639606227338::1789141471::0::1::::<><><>0<>0<><>::uid://ckaec8uwkacni::::res://Assets/characters/player/south.png<>uid://dxecfbsopfj6d::::res://Scripts/player/player.gd
+player.tscn::PackedScene::1424447639606227338::1789141691::0::1::::<><><>0<>0<><>::uid://ckaec8uwkacni::::res://Assets/characters/player/south.png<>uid://dxecfbsopfj6d::::res://Scripts/player/player.gd
 ::res://Scenes/Characters/::1788858121
 ::res://Scenes/Levels/::1788858121
 ::res://Scenes/UI/::1789121333
@@ -42,16 +42,16 @@ Player.gd::GDScript::904456682646907688::1789123229::0::1::::CharacterPlayer<>Pl
 GameManager.gd::GDScript::16319974363638785::1789038892::0::1::::<>Node<><>0<>0<><>::
 PathNode.gd::GDScript::3243454824827071387::1789034722::0::1::::PathNode<>RefCounted<><>0<>0<><>::
 SearchContract.gd::GDScript::8682818839957447653::1789034722::0::1::::SearchContract<>RefCounted<><>0<>0<><>::
-::res://Scripts/map/::1789141228
-camera_anchor.gd::GDScript::8682331864302799265::1789138365::0::1::::<>Camera2D<><>0<>0<><>::
-map_data.gd::GDScript::8519839991549357912::1789141228::0::1::::MapData<>Node2D<><>0<>0<><>::
+::res://Scripts/map/::1789142781
+camera_anchor.gd::GDScript::8682331864302799265::1789142781::0::1::::<>Camera2D<><>0<>0<><>::
+map_data.gd::GDScript::8519839991549357912::1789142781::0::1::::MapData<>Node2D<><>0<>0<><>::
 ::res://Scripts/npc/::1789141228
-npc.gd::GDScript::7424752810730368107::1789141471::0::1::::NPC<>Node2D<><>0<>0<><>::
+npc.gd::GDScript::7424752810730368107::1789141874::0::1::::NPC<>Node2D<><>0<>0<><>::
 ::res://Scripts/Pathfinding/::1789036525
 AStar.gd::GDScript::146368943500341649::1789123314::0::1::::AStarAlgorithm<>RefCounted<><>0<>0<><>::
 GridManager.gd::GDScript::5962992146674916888::1789123214::0::1::::GridManager<>RefCounted<><>0<>0<><>::
 UCS.gd::GDScript::5121807250732345455::1789123318::0::1::::UCS<>RefCounted<><>0<>0<><>::
 ::res://Scripts/player/::1789141228
-player.gd::GDScript::8781993409711523101::1789141471::0::1::::Player<>Node2D<><>0<>0<><>::
+player.gd::GDScript::8781993409711523101::1789141691::0::1::::Player<>Node2D<><>0<>0<><>::
 ::res://Scripts/UI/::1789136721
-DebugOverlay.gd::GDScript::601077424576754000::1789137678::0::1::::<>CanvasLayer<><>0<>0<><>::
+DebugOverlay.gd::GDScript::601077424576754000::1789182305::0::1::::<>CanvasLayer<><>0<>0<><>::
