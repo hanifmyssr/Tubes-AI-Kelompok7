@@ -26,6 +26,31 @@ Pengguna dapat memilih tipe heuristik melalui inspector Godot (variabel `Heurist
 - **Diagonal Distance**: `h = max(|dx|, |dy|)` – kombinasi Manhattan dan Euclidean, cocok untuk gerakan delapan arah.
 - **Chebyshev Distance**: `h = max(|dx|, |dy|)` – secara khusus memperhitungkan gerakan diagonal seperti gerakan Raja pada catur, memberikan estimasi yang cepat dan admissible bila diagonal diizinkan.
 
+## Struktur
+```
+├───.godot
+├───Assets
+│   ├───Audio
+│   ├───characters
+│   │   ├───npc
+│   │   └───player
+│   ├───environment
+│   ├───Sprites
+│   └───Tilesets
+├───Scenes
+│   ├───Characters
+│   ├───Levels
+│   └───UI
+└───Scripts
+    ├───Characters
+    ├───Core
+    ├───map
+    ├───npc
+    ├───Pathfinding
+    ├───player
+    └───UI
+```
+
 ## Cara Kerja dalam Godot
 1. **Node Grid**: Dibangun dari TileMap, setiap tile menjadi node dengan koordinat `(x, y)`.
 2. **Pathfinder.gd**: Skrip utama yang mengimplementasikan UCS dan A* menggunakan `PriorityQueue`.
@@ -43,6 +68,9 @@ Pengguna dapat memilih tipe heuristik melalui inspector Godot (variabel `Heurist
 
 ## Kelompok
 Kelompok 7 - Universitas Pendidikan Indonesia
-- Hanif Muyassar
-- Moch Fadillah Pratama
-- Muhammad Zidan Mirza Fedrieka
+- Muhammad Hanif Muyassar (2510593)
+- Moch Fadillah Pratama (2506968)
+- Muhammad Zidan Mirza Fedrieka (2507692)
+
+### Video Demonstrasi
+https://youtu.be/1OEMFVtQqes?si=A8DEqqdvyR-6knRA
