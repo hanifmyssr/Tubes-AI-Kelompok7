@@ -1,13 +1,3 @@
-# ==============================================================================
-# File        : AStar.gd
-# Path        : res://Scripts/Pathfinding/AStar.gd
-# Modul       : TSK-06 (Algoritma A* Engine)
-# Tim         : Anggota 2 (AI & Pathfinding Logic)
-# Deskripsi   : Mengimplementasikan algoritma A* Pathfinding dengan evaluasi 
-#               f(n) = g(n) + h(n). Mendukung 3 jenis fungsi heuristik: 
-#               Manhattan, Euclidean, dan Chebyshev.
-# ==============================================================================
-
 class_name AStarAlgorithm
 extends RefCounted
 

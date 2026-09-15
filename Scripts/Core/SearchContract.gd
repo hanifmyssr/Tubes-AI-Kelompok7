@@ -1,13 +1,3 @@
-# ==============================================================================
-# File        : SearchContract.gd
-# Path        : res://Scripts/Core/SearchContract.gd
-# Modul       : TSK-04 (Data Struct & Interface Contract)
-# Tim         : Anggota 2 (AI & Pathfinding Logic)
-# Deskripsi   : Kontrak data output terstandarisasi. Memastikan seluruh algoritma 
-#               pathfinding (UCS & A*) mengembalikan Dictionary dengan format 
-#               yang seragam untuk dibaca oleh DebugOverlay dan UI HUD.
-# ==============================================================================
-
 class_name SearchContract
 extends RefCounted
 

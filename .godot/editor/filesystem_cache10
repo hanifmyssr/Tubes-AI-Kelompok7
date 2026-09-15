@@ -1,17 +1,18 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1789197525
+::res://::1789270614
 export_presets.cfg::TextFile::-1::1789197033::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::7685351620017089026::1788856457::1788856462::1::::<><><>0<>0<>495e83d33347885c620be4880b6150a1<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile::-1::1789197033::0::1::::<><><>0<>0<><>::
+VIDEO_DEMO_SCRIPT.md::TextFile::-1::1789268751::0::1::::<><><>0<>0<><>::
 ::res://Assets/::1789197033
 ::res://Assets/Audio/::1788858121
 ::res://Assets/characters/::1789197033
-::res://Assets/characters/npc/::1789197033
+::res://Assets/characters/npc/::1789197525
 frame_000.png::CompressedTexture2D::2823440804935257002::1789197033::1789197525::1::::<><><>0<>0<>6e92cffdf25ee99764a5c245df93b715<>res://.godot/imported/frame_000.png-96409356aa20c8203b37c7c6ba62e303.ctex::
 south.png::CompressedTexture2D::7687999606674730327::1789197033::1789197525::1::::<><><>0<>0<>df9326adbda312427257adf3638fdfb5<>res://.godot/imported/south.png-258db9c2a4a3724be35e74da05883076.ctex::
-::res://Assets/characters/player/::1789197033
+::res://Assets/characters/player/::1789197525
 south.png::CompressedTexture2D::5474978008504990122::1789197033::1789197525::1::::<><><>0<>0<>b710f50c721f00ea66442a5f2f3902f7<>res://.godot/imported/south.png-a708a57a740586ced89ff3b2964719e9.ctex::
-::res://Assets/environment/::1789197033
+::res://Assets/environment/::1789197525
 Abandoned House 2.png::CompressedTexture2D::4905082274623540812::1789197033::1789197525::1::::<><><>0<>0<>20ea10c71a98b5c658944fc3b8487f33<>res://.godot/imported/Abandoned House 2.png-ea539bc76677a689910bc4860c11a9d5.ctex::
 Abandoned House.png::CompressedTexture2D::4963185887502171666::1789197033::1789197525::1::::<><><>0<>0<>8a94ef9a9f0100b7d642d9cb3a28f496<>res://.godot/imported/Abandoned House.png-2d2de3e8a33be10c3be45cc292f69732.ctex::
 Abandoned Tower.png::CompressedTexture2D::4184116333779229575::1789197033::1789197525::1::::<><><>0<>0<>d4d54dc4b8dbaee294aee5eeed27881c<>res://.godot/imported/Abandoned Tower.png-e36b3b24f587746d74a9e91c6b6c0ef9.ctex::

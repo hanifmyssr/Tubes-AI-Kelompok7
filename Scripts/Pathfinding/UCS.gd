@@ -1,13 +1,3 @@
-# ==============================================================================
-# File        : UCS.gd
-# Path        : res://Scripts/Pathfinding/UCS.gd
-# Modul       : TSK-05 (Algoritma UCS Engine)
-# Tim         : Anggota 2 (AI & Pathfinding Logic)
-# Deskripsi   : Mengimplementasikan algoritma Uniform Cost Search (UCS) dengan 
-#               nilai heuristik h(n) = 0. Algoritma ini menjamin jalur terpendek
-#               dengan mengekspansi node berdasarkan akumulasi cost g(n) terkecil.
-# ==============================================================================
-
 class_name UCS
 extends RefCounted
 
