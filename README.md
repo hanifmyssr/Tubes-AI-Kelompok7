@@ -1,7 +1,7 @@
 # Bakekok
 
 ## Deskripsi
-Proyek ini merupakan tugas akhir mata kuliah Kecerdasan Buatan untuk kelompok 7. Implementasi ini menggunakan Godot Engine untuk membuat visualisasi algoritma A* (A-star) dan UCS dalam game atau simulasi.
+Proyek Bakekok ini merupakan tugas besar mata kuliah Kecerdasan Buatan untuk kelompok 7. Implementasi ini menggunakan Godot Engine untuk membuat visualisasi algoritma A* (A-star) dan UCS dalam game atau simulasi.
 
 ## Fitur
 - Implementasi algoritma pencarian jalur A*.
@@ -41,14 +41,8 @@ Pengguna dapat memilih tipe heuristik melalui inspector Godot (variabel `Heurist
 - **Godot Engine**: Unduh dari https://godotengine.org/download
 - Tidak ada dependensi tambahan karena semua skrip berada di dalam folder `Scripts`.
 
-## Kontribusi
-Jika ingin berkontribusi, lakukan fork repository ini, buat branch baru, dan ajukan *pull request*.
-
 ## Kelompok
 Kelompok 7 - Universitas Pendidikan Indonesia
 - Hanif Muyassar
 - Moch Fadillah Pratama
 - Muhammad Zidan Mirza Fedrieka
-
-## Lisensi
-Proyek ini dilisensikan di bawah **MIT License**. Lihat file `LICENSE` untuk detail lebih lanjut.
