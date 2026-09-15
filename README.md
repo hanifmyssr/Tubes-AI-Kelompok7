@@ -1,4 +1,4 @@
-# BoluKesepian
+# Bakekok
 
 ## Deskripsi
 Proyek ini merupakan tugas akhir mata kuliah Kecerdasan Buatan untuk kelompok 7. Implementasi ini menggunakan Godot Engine untuk membuat visualisasi algoritma A* (A-star) dan UCS dalam game atau simulasi.
